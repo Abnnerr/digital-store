@@ -82,6 +82,7 @@ header {
             color: white;
             border-radius: 10px;
             transition-duration: 500ms;
+            /* ola */
 
             &:hover {
                 cursor: pointer;
