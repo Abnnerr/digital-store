@@ -1,3 +1,8 @@
+@font-face {
+    font-family: inter;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +10,14 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: inter, sans-serif;
 }
+
+:root {
+    --rosa:#C92071;
+}
+
+
 html {
     scroll-behavior: smooth;
    
@@ -15,17 +26,18 @@ header {
     height: 192px;
     background-color: #FFFFFF;
 
-    #conteiner {
+    .conteiner {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         padding: 60px 85px;
         
     } 
     #logo {
         display: flex;
+        align-items: center;
         gap: 15px;
-        color: #C92071;
+        color: var(--rosa);
 
         
         img {
@@ -33,33 +45,48 @@ header {
             width: 40px;
         }
     }
-    #pesq {
+    .pesq {
         display: flex;
-        align-items: center;
-        gap: 50px;
-
-        #pesquisar {
-            width: 559px;
+        
+        input {
+            width: 559px;  
             height: 45px;
             padding-left: 15px;
+            transition-duration: 500ms;
+            border-radius: 5px;
+            
            
         }
-        #pesquisar:focus { 
-            border-color: #C92071;
+        input:focus{ 
+            outline-color:var(--rosa);
         }
+        i {
+            background-color: #C92071;
+            color: aqua;
+            width: 30px;
+            height: 30px;
+        }
+       
+    }
+    .acoes {
+        display: flex;
+        align-items: center;
+        gap: 30px;
         a {
-            text-decoration: underline;
             color: black;
+            text-decoration: underline;
         }
         button {
-            width: 114px;
-            height: 40px;
-            background-color: #C92071;
-            border-radius: 10px;
+            background-color: var(--rosa);
+            padding: 10px 30px;
             color: white;
-        }
-        button:hover {
-            cursor: pointer;
+            border-radius: 10px;
+            transition-duration: 500ms;
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0px 0px 5px var(--rosa);
+            }
         }
     }
     ul {
@@ -69,16 +96,44 @@ header {
         padding-left: 85px;
 
         .active {
-            border-bottom: 2px solid #C92071;
+            border-bottom: 2px solid var(--rosa);
             
             a {
-                color: #C92071;
+                color: var(--rosa);
             }
         }
         a {
             color: black;
+            transition-duration: 500ms;
+            &:hover {
+                color: var(--rosa);
+            }
         }
     }
   
     
+}
+@media screen and (max-width: 480px){ 
+    header {
+        height: 50px;
+        #conteiner {
+            padding: 30px 40px;
+        }
+    }
+    #logo {
+        img {
+            width: 10px;
+            height: 10px;
+        }
+        h1 {
+            font-size: 15px;
+        }
+    }
+    #pesq {
+        #pesqui {
+            width: 30px;
+            height: 5px;
+        }
+    }
+
 }
