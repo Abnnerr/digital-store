@@ -33,6 +33,7 @@
 
 :root {
     --rosa: #C92071;
+    --gray: #474747
 }
 
 
@@ -169,9 +170,10 @@ header {
 }
 
 .conteiner_destaques {
+
     .destaques {
         width: 100%;
-        height: 300px;
+        height: 700px;
         padding: 30px 60px;
 
         .titulo {
@@ -200,16 +202,16 @@ header {
                         border-radius: 10px;
                         width: 70px;
                         padding: 5px;
-                        text-align: center; 
-                        
+                        text-align: center;
+
                         &:hover {
-                                cursor: pointer;
-                            }
+                            cursor: pointer;
+                        }
 
                         h6 {
                             font-weight: 900;
 
-                           
+
                         }
 
                     }
@@ -236,6 +238,50 @@ header {
 
             }
 
+        }
+
+        .conteiner_destaques_logo {
+            padding-top: 100px;
+
+            .destaques_logo {
+                text-align: center;
+
+
+                h3 {
+                    padding-bottom: 30px;
+                    font-weight: 900;
+                    color: gray;
+                }
+
+                .list_destaques_logo {
+                    display: flex;
+                    gap: 30px;
+                    justify-content: center;
+
+                    div {
+                        text-align: center;
+
+                        i {
+                            background-color: #d8d8d8;
+                            border-radius: 50%;
+                            padding: 20px 10px;
+                            font-size: 70px;
+                            transition-duration: 700ms;
+                            &:hover {
+                                color: var(--rosa);
+                                padding: 30px 20px;
+                            }
+                        }
+
+                        h4 {
+                            padding: 15px 0px;
+                            font-weight: 800;
+                            color: var(--gray);
+                        }
+                    }
+
+                }
+            }
         }
     }
 
