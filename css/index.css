@@ -3,6 +3,16 @@
     src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 }
 
+/* 
+@keyframes abner{
+    0% {
+    }
+    80% {
+        transform: rotate(360deg);
+    }
+} */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,76 +23,105 @@
     font-family: inter, sans-serif;
 }
 
+.btn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px var(--rosa);
+}
+
+
 :root {
-    --rosa:#C92071;
+    --rosa: #C92071;
 }
 
 
 html {
     scroll-behavior: smooth;
-   
-}
-header {
-    height: 192px;
-    background-color: #FFFFFF;
 
-    .conteiner {
+}
+
+header {
+    height: 200px;
+
+    .conteiner_top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 60px 85px;
-        
-    } 
+
+    }
+
     #logo {
         display: flex;
         align-items: center;
         gap: 15px;
         color: var(--rosa);
 
-        
+
         img {
             height: 40px;
             width: 40px;
+            /* animation: abner 5s  infinite; */
         }
     }
+
     .pesq {
         display: flex;
-        
+        align-items: center;
+
         input {
-            width: 559px;  
+            width: 520px;
             height: 45px;
             padding-left: 15px;
             transition-duration: 500ms;
             border-radius: 5px;
-            
-           
+
+            &:focus {
+                outline-color: var(--rosa);
+            }
+
+            &::placeholder {
+                font-weight: 700;
+            }
         }
-        input:focus{ 
-            outline-color:var(--rosa);
+
+        a {
+            display: flex;
+            position: relative;
+            right: 35px;
+            color: gray;
+            transition-duration: 500ms;
+
+            &:hover {
+                color: var(--rosa);
+            }
+
         }
-        i {
-            background-color: #C92071;
-            color: aqua;
-            width: 30px;
-            height: 30px;
-        }
-       
     }
+
     .acoes {
         display: flex;
         align-items: center;
         gap: 30px;
+
         a {
             color: black;
             text-decoration: underline;
+            transition-duration: 500ms;
+
+            &:hover {
+                color: #C92071;
+
+            }
         }
+
         button {
             background-color: var(--rosa);
             padding: 10px 30px;
             color: white;
-            border-radius: 10px;
+            border-radius: 5px;
             transition-duration: 500ms;
-            /* ola */
 
             &:hover {
                 cursor: pointer;
@@ -90,50 +129,113 @@ header {
             }
         }
     }
+
     ul {
         display: flex;
         gap: 50px;
-        padding-top: 10px;
         padding-left: 85px;
 
         .active {
             border-bottom: 2px solid var(--rosa);
-            
+
             a {
                 color: var(--rosa);
             }
         }
+
+        li {
+            margin: 0;
+        }
+
         a {
             color: black;
             transition-duration: 500ms;
+
             &:hover {
                 color: var(--rosa);
             }
         }
     }
-  
-    
+
+
 }
-@media screen and (max-width: 480px){ 
-    header {
-        height: 50px;
-        #conteiner {
-            padding: 30px 40px;
-        }
+
+.conteiner_banner {
+    .banner {
+        background-color: #C92071;
+        width: 100%;
+        height: 500px;
     }
-    #logo {
-        img {
-            width: 10px;
-            height: 10px;
+}
+
+.conteiner_destaques {
+    .destaques {
+        width: 100%;
+        height: 300px;
+        padding: 30px 60px;
+
+        .titulo {
+            padding-left: 95px;
+            padding-bottom: 15px;
+            font-weight: 900;
+            color: #474747;
         }
-        h1 {
-            font-size: 15px;
-        }
-    }
-    #pesq {
-        #pesqui {
-            width: 30px;
-            height: 5px;
+
+        .desta_list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+            .dest1 {
+                position: relative;
+
+                .texto_promo {
+                    width: 145px;
+                    position: absolute;
+                    bottom: 40px;
+                    left: 20px;
+
+                    div {
+                        background-color: #c0c612;
+                        border-radius: 10px;
+                        width: 70px;
+                        padding: 5px;
+                        text-align: center; 
+                        
+                        &:hover {
+                                cursor: pointer;
+                            }
+
+                        h6 {
+                            font-weight: 900;
+
+                           
+                        }
+
+                    }
+
+                    a {
+                        &.btn {
+                            background-color: var(--rosa);
+                            color: white;
+                        }
+                    }
+
+                    h4 {
+                        margin-top: 5px;
+                        margin-bottom: 20px;
+                        font-size: 25px;
+                        font-weight: 900;
+                    }
+                }
+
+                img {
+                    width: 300px;
+                    height: 200px;
+                }
+
+            }
+
         }
     }
 
