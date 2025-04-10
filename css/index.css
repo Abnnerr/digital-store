@@ -27,12 +27,12 @@
     padding: 10px 30px;
     border-radius: 5px;
     transition-duration: 500ms;
+
     &:hover {
         box-shadow: 0px 0px 5px var(--rosa);
     }
-    
-}
 
+}
 
 :root {
     --rosa: #C92071;
@@ -134,6 +134,7 @@ header {
                 box-shadow: 0px 0px 5px var(--rosa);
             }
         }
+
         .carrinho {
             position: relative;
 
@@ -142,6 +143,7 @@ header {
                     color: #c0c612;
                 }
             }
+
             span {
                 background-color: red;
                 border-radius: 100%;
@@ -196,7 +198,7 @@ header {
 
 
     .banner {
-        background-color:var(--gray_light);
+        background-color: var(--gray_light);
         width: 100%;
         height: 500px;
         position: relative;
@@ -210,6 +212,7 @@ header {
                 right: 0px;
                 bottom: 1px;
             }
+
             .text_banner {
                 position: absolute;
                 left: 200px;
@@ -220,10 +223,12 @@ header {
                     color: #F6AA1C;
                     font-weight: 600;
                 }
+
                 h1 {
                     margin-top: 15px;
                     font-size: 60px;
                 }
+
                 p {
                     margin-top: 20px;
                     margin-bottom: 30px;
@@ -231,6 +236,7 @@ header {
                     line-height: 30px;
                     font-weight: 600;
                 }
+
                 a {
 
                     &.btn {
@@ -238,7 +244,7 @@ header {
                         font-weight: 700;
                         background-color: var(--rosa);
                     }
-                   
+
                 }
 
             }
@@ -267,9 +273,21 @@ header {
 
             .dest1 {
                 position: relative;
+                width: 300px;
+                height: 200px;
+                border-radius: 15px;
+                background-color: #D8E3F2;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    position: absolute;
+                    border-bottom-right-radius: 10px;
+                    right: 0;
+                }
 
                 .texto_promo {
-                    width: 145px;
+                    width: 155px;
                     position: absolute;
                     bottom: 40px;
                     left: 20px;
@@ -295,8 +313,15 @@ header {
 
                     a {
                         &.btn {
-                            background-color: var(--rosa);
-                            color: white;
+                            background-color: white;
+                            color: var(--rosa);
+                            transition-duration: 700ms !important;
+
+                            &:hover {
+                                background-color: var(--rosa);
+                                color: white;
+                            }
+
                         }
                     }
 
@@ -308,10 +333,7 @@ header {
                     }
                 }
 
-                img {
-                    width: 300px;
-                    height: 200px;
-                }
+
 
             }
 
@@ -337,17 +359,18 @@ header {
 
                     div {
                         text-align: center;
+
                         img {
-                            background-color: #d8d8d8;
                             border-radius: 100%;
                             padding: 20px 20px;
                             font-size: 60px;
                             transition-duration: 500ms;
-                           
+
                             &:hover {
                                 cursor: pointer;
                                 padding: 30px 30px;
-                                background-color: var(--rosa);
+                                border: 3px solid var(--rosa);
+                                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.454);
                             }
                         }
 
@@ -363,5 +386,81 @@ header {
             }
         }
     }
+
+}
+
+.conteiner_produtos {
+
+    .produtos {
+        background-color: #ca0b0b;
+        width: 100%;
+        height: 800px;
+        padding: 0px 85px;
+
+        .titulo_produtos {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+
+            a {
+                color: var(--rosa);
+            }
+        }
+
+        .list_produtos {
+            /*  */
+        }
+    }
+}
+
+.conteiner_oferta {
+
+    .oferta_especial {
+        height: 500px;
+        .oferta {
+            display: flex;
+
+            .imagem_oferta {
+                background-color: #c0c612;
+                flex: 1;
+
+                img {
+                }
+               
+            }
+
+            .texto_oferta_conteiner {
+                background-color: #22131a;
+                padding-top: 50px;
+                flex: 1;
+
+
+                .texto_oferta {
+                    width: 300px;
+                    background-color: aqua;
+                }
+
+                h5 {
+                    color: var(--rosa);
+                }
+
+                h1 {
+                    font-size: 50px;
+                    margin: 30px 0px;
+
+                }
+
+                p {
+                    margin-bottom: 30px;
+                }
+
+                a {
+                    background-color: var(--rosa);
+                    color: white;
+                }
+            }
+        }
+    }
+
 
 }
