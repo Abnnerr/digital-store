@@ -37,7 +37,7 @@
 :root {
     --rosa: #C92071;
     --gray: #474747;
-    --gray_light: #acabab3b;
+    --gray_light: #acabab7e;
 }
 
 
@@ -417,27 +417,45 @@ header {
 
     .oferta_especial {
         height: 500px;
+
         .oferta {
             display: flex;
 
             .imagem_oferta {
-                background-color: #c0c612;
                 flex: 1;
+                text-align: center;
+                position: relative;
+                margin-top: 30px;
 
-                img {
+                div {
+                    width: 350px;
+                    height: 350px;
+                    top: 10px;
+                    left: 160px;
+                    position: absolute;
+                    border-radius: 100%;
+                    /* background-color: var(--gray_light); */
+                    background-image: linear-gradient(to right, #C92071 , #acabab7e );
+
+                    
                 }
-               
+                img {
+                    position: absolute;
+                    top: 15px;
+                    left: 25px;
+                }
+
+
             }
 
             .texto_oferta_conteiner {
-                background-color: #22131a;
                 padding-top: 50px;
                 flex: 1;
 
 
                 .texto_oferta {
-                    width: 300px;
-                    background-color: aqua;
+                    width: 550px;
+                    padding-bottom: 20px;
                 }
 
                 h5 {
@@ -452,6 +470,7 @@ header {
 
                 p {
                     margin-bottom: 30px;
+                    width: 400px;
                 }
 
                 a {
@@ -463,4 +482,65 @@ header {
     }
 
 
+}
+#conteiner_bottom {
+    .conteiner_rodape {
+        width: 100%;
+        height: 554px;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        
+        .logo_rodape {
+              background-color: #ca0b0b;
+              width: 300px;
+
+            .logo {
+                display: flex;
+                align-items: center;
+              
+                
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+                h3 {
+                    font-size: 30px;
+                }
+            }
+            div {
+                p {
+                    font-size: 15px;
+                }
+                div {
+                    .icon {
+                    
+                    }
+                }
+            }
+        }
+    }
+    .info {
+        display: flex;
+        background-color: #c0c612;
+        height: 200px;
+
+        .informac {
+            background-color: #dd4f4f;
+            a {
+                display: flex;
+                margin-bottom: 10px;
+            }
+            
+        }
+        .categorias {
+            background-color: aqua;
+
+            a {
+                display: flex;
+            }
+        }
+    }
 }
