@@ -445,10 +445,12 @@ header {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 18px;
+            /* background-color: #d10c0c; */
             .card {
-                width: 292px;
+                width: 260px;
                 height: 319px;
                 border-radius: 8px;
+                /* background-color: #F6AA1C; */
 
                 .imagem_card {
                     background-color: var(--gray_light);
@@ -479,15 +481,15 @@ header {
 
                 }
                 .text_card {
-
+                    /* background-color: #002aff; */
                     h6 {
                         margin-top: 10px;
-                        margin-bottom: 15px;
+                        margin-bottom: 5px;
                         color: #8f8f8f;
                     }
                     p {
                         font-size: 26px;
-                        margin-bottom: 20px;
+                        margin-bottom: 15px;
                         color: #474747;
 
                     }
